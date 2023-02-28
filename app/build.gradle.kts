@@ -18,6 +18,7 @@ dependencies {
     implementation("org.eclipse.jetty:jetty-servlets:$jettyVersion")
     implementation("org.glassfish.jersey.containers:jersey-container-servlet-core:$jerseyVersion")
     implementation("org.glassfish.jersey.inject:jersey-hk2:$jerseyVersion")
+    implementation("org.mongodb:mongodb-driver-sync:4.8.2")
 }
 
 application {
