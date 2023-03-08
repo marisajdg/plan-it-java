@@ -13,8 +13,7 @@ public class HelloResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String sayHello(){
-        DatabaseConnection db = new DatabaseConnection();
-        MongoClient mongoClient = db.getMongoClient();
+        MongoClient mongoClient = DatabaseConnection.getMongoClient();
         MongoDatabase database = mongoClient.getDatabase("sample_restaurants");
         return "Hello World!";
     }

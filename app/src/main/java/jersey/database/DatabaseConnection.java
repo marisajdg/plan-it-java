@@ -23,8 +23,9 @@ public class DatabaseConnection {
         //todo: other location? trycatchhh, research best way to do this
         Properties props = new Properties();
         try {
-            // fix the path to current file and relative -- current dir is plan-it-java
-            FileInputStream fileInputStream = new FileInputStream("app/src/main/java/jersey/database/database.properties");
+            String curr = System.getProperty("user.dir");
+            // todo: fix the path
+            FileInputStream fileInputStream = new FileInputStream("/Users/marisadiaz/Documents/repos/plan-it-java/app/src/main/java/jersey/database/database.properties");
             props.load(fileInputStream);
         } catch (FileNotFoundException e) {
             // Handle the exception
